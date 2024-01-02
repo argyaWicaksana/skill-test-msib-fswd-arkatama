@@ -28,15 +28,14 @@ class ResidentController extends Controller
         $splitData = preg_split('/(\d+)/', $data, -1, PREG_SPLIT_DELIM_CAPTURE);
         $deleteWord = [
             'TAHUN',
-            'TH',
             'THN',
+            'TH',
         ];
 
         $name = rtrim($splitData[0]);
         $age = $splitData[1];
         $city = str_replace($deleteWord, '', $splitData[2]);
         $city = trim($city);
-        // dd($name, $age, $city);
 
         $createdAt = $updatedAt = now();
 

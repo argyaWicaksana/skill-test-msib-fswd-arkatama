@@ -25,7 +25,7 @@ class ResidentController extends Controller
 
         $data = $request->input('data');
         $data = strtoupper($data);
-        $splitData = preg_split('/(\d+)/', $data, -1, PREG_SPLIT_DELIM_CAPTURE);;
+        $splitData = preg_split('/(\d+)/', $data, -1, PREG_SPLIT_DELIM_CAPTURE);
         $deleteWord = [
             'TAHUN',
             'TH',
